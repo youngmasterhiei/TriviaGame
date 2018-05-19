@@ -1,5 +1,27 @@
 body {
-    background-image: url(images/twdCoverPhoto.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.titleDiv {
+    background-image: url(images/twdCoverPhoto.jpg);
+
+    position: relative;
+   
+    margin-top: 20%;
+    height: 500px;
+    width: 40%;
+    left: 20%;
+}
+
+.titleHeader {
+    position: absolute;
+    top: 30%;
+    
+    text-align: center;
+}
+
+.startButton {
+    width: 33%;
+    text-align: center;
 }
