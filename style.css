@@ -1,27 +1,35 @@
 body {
     background-size: cover;
     background-repeat: no-repeat;
+    background-image: url(images/twdCoverPhoto.jpg);
+
 }
 
 .titleDiv {
-    background-image: url(images/twdCoverPhoto.jpg);
-
-    position: relative;
-   
-    margin-top: 20%;
     height: 500px;
-    width: 40%;
-    left: 20%;
+
+    margin-top: 7%;
+    width: auto;
+    
+
+ 
 }
 
 .titleHeader {
-    position: absolute;
-    top: 30%;
+  
+    margin-top: 27%;
     
     text-align: center;
 }
 
 .startButton {
-    width: 33%;
-    text-align: center;
+    margin-top: 5%;
+    background-color: lightgray;
+    color: black;
+    border-color: lightgray;
+}
+.startButton:hover {
+    background-color: darkgray;
+    color: white;
+    border-color: darkgray;
 }
