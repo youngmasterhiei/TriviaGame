@@ -2,6 +2,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(images/twdCoverPhoto.jpg);
+    
 
 }
 
@@ -34,12 +35,26 @@ body {
     border-color: darkgray;
 }
 
+.countDownStyle {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 35%;
+}
+.questionStyle {
+    font-size: 45px;
+    text-align: center;
+
+}
+
+
 .answerButtons {
     margin-top: 6%;
     background-color: lightgray;
     color: black;
     border-color: lightgray;
     height: 30px;
+    text-align: center;
+    line-height: 2%;
 }
 .answerButtons:hover {
     background-color: darkgray;
@@ -48,5 +63,5 @@ body {
 }
 
 li{
-    margin-top: 35%;
+    margin-top: 3%;
 }
