@@ -3,7 +3,8 @@
 var trivia = [{
     question: "Which character woke up from a coma after being shot?",
     a: "Carl Grimes", b: "Shane Walsh",c: "Daryl Dixon", d: "Rick Grimes",
-    answer: "Rick Grimes"
+    answer: "Rick Grimes",
+    image: "images/atlantageorgia.jpg"
 },{
     question: "What state is the setting for the show?",
     a: "Georgia", b:"Ohio", c: "Florida", d:"Virginia",
@@ -68,6 +69,13 @@ $("#startGame").on("click", function (){       // start game button
       if(userAnswer === correctAnswer){
           userCorrectAnswers++;
           questionNumber ++;    // needed to cycle the questions                       displays next question
+         debugger
+          $("#questionPage").hide();
+          $("#displayCorrectAnswer").show();
+
+          showCorrectAnswer(correctAnswer, trivia[questionNumber].image);
+          $("#questionPage").show();
+
           displayQuestionsAnswers(trivia[questionNumber].question,trivia[questionNumber].a,trivia[questionNumber].b,trivia[questionNumber].c,trivia[questionNumber].d, trivia[questionNumber].answer);
           countDown = 11;
           updateStats();
@@ -121,6 +129,16 @@ correctAnswer = correct;
 
 };
 
+
+
+function showCorrectAnswer (answer, image){
+    $("#correctAnswerHeader").html(answer);
+    $("#correctAnswerImg").html(image);
+
+
+
+
+};
 
 
  
