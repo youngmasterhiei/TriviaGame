@@ -65,3 +65,9 @@ body {
 li{
     margin-top: 3%;
 }
+
+.stats {
+    font-size: 25px;
+    color: white;
+    
+}
