@@ -29,7 +29,7 @@ $(document).ready(function(){
     $("#questionPage").hide();
 
 $("#startGame").on("click", function (){
-  questionNumber ++;
+  
     $("#questionPage").show();
     $("#mainPageCard").hide();
     displayQuestionsAnswers(trivia[questionNumber].question,trivia[questionNumber].a,trivia[questionNumber].b,trivia[questionNumber].c,trivia[questionNumber].d, trivia[questionNumber].answer);
@@ -43,6 +43,9 @@ $("#startGame").on("click", function (){
       var userAnswer = $(this).text();
       if(userAnswer === correctAnswer){
           userCorrectAnswers++;
+          questionNumber ++;
+          displayQuestionsAnswers(trivia[questionNumber].question,trivia[questionNumber].a,trivia[questionNumber].b,trivia[questionNumber].c,trivia[questionNumber].d, trivia[questionNumber].answer);
+
 
       }
     
