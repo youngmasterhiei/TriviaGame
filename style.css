@@ -33,3 +33,13 @@ body {
     color: white;
     border-color: darkgray;
 }
+
+.answerButtons {
+    margin-top: 5%;
+    background-color: lightgray;
+    color: black;
+    border-color: lightgray;
+}
+li{
+    margin-top: 35%;
+}

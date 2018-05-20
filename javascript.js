@@ -2,7 +2,7 @@
 
 
 
-
+var countDown = 30;
 
 $(document).ready(function(){
     $("#questionPage").hide();
@@ -13,15 +13,26 @@ $("#startGame").on("click", function (){
     $("#mainPageCard").hide();
    
     
-    showQuestion();
+    
+    countDownTimer();
 
 
 })
 });
 
+function countDownTimer(){
+    setInterval(function(){
+    if (0<countDown){
+         countDown--;
+       
+        console.log(countDown);
+        $("#countDownTimerId").html("Time Remaining" + countDown);
+    }
+
+},1000);
+
+}
 
 
-setInterval(function(){
-console.log(time)
-});
+
 
