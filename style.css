@@ -35,11 +35,18 @@ body {
 }
 
 .answerButtons {
-    margin-top: 5%;
+    margin-top: 6%;
     background-color: lightgray;
     color: black;
     border-color: lightgray;
+    height: 30px;
 }
+.answerButtons:hover {
+    background-color: darkgray;
+    color: white;
+    border-color: darkgray;
+}
+
 li{
     margin-top: 35%;
 }
