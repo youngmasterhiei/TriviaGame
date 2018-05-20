@@ -5,9 +5,23 @@
 
 
 $(document).ready(function(){
+    $("#questionPage").hide();
 
 $("#startGame").on("click", function (){
-$("#mainPageCard").replaceWith("<p class =titleHeader >What is Rick Grimes sons name</p>");
+  
+    $("#questionPage").show();
+    $("#mainPageCard").hide();
+   
+    
+    showQuestion();
+
 
 })
 });
+
+
+
+setInterval(function(){
+console.log(time)
+});
+
