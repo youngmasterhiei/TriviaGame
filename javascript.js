@@ -2,30 +2,36 @@
 
 var trivia = [{
     question: "Which character woke up from a coma after being shot?",
-    a: "Carl Grimes", b: "Shane Walsh",c: "Daryl Dixon", d: "Rick Grimes",
+    a: "Carl Grimes", b: "Shane Walsh", c: "Daryl Dixon", d: "Rick Grimes",
     answer: "Rick Grimes",
-    image: "images/atlantageorgia.jpg"
+    image: "images/rickwakingup.gif"
 },{
     question: "What state is the setting for the show?",
     a: "Georgia", b:"Ohio", c: "Florida", d:"Virginia",
-    answer: "Georgia"
+    answer: "Georgia",
+    image: "images/atlantageorgia.jpg"
     
 }, {
     question: "Who provided rick refuge in the very beginning and explained the zombie apocalypse to him?",
     a: "Shane", b:"Morgan", c: "Lori", d:"Maggie",
-    answer: "Morgan"
+    answer: "Morgan",
+    image: "images/morgan.gif"
+
 }, {
     question: "What was Morgan's sons name?",
     a: "Carl", b:"Dwight", c: "Beth", d:"Duane",
-    answer: "Duane"
+    answer: "Duane",
+    image: "images/duane.jpg"
 }, {
     question: "Which Character gets trapped in the tank in atlanta?",
     a: "Shane", b:"Rick", c: "Lori", d:"Maggie",
-    answer: "Rick"
+    answer: "Rick",
+    image: "images/rickintank.gif"
 }, {
     question: "Who rescued rick from the tank in atlanta?",
     a: "Andrea", b:"Morgan", c: "Lori", d:"Glen",
-    answer: "Glen"
+    answer: "Glen",
+    image: "images/glentank.gif"
 }, {
     question: "What job did Glen have before the apocalypse?",
     a: "Pizza Delivery", b:"Valet", c: "Dunder Mifflen Textiles", d:"Programmer",
@@ -37,8 +43,6 @@ var trivia = [{
 }, {
 }
 ];
-
-
 
 
 
@@ -68,18 +72,22 @@ $("#startGame").on("click", function (){       // start game button
       var userAnswer = $(this).text();
       if(userAnswer === correctAnswer){
           userCorrectAnswers++;
-          questionNumber ++;    // needed to cycle the questions                       displays next question
-         debugger
-          $("#questionPage").hide();
-          $("#displayCorrectAnswer").show();
+          $("#questionPage").hide(); //hides question page     
+          $("#displayCorrectAnswer").show();      //shows picture or gif of correct answer           
+          showCorrectAnswer ();
+          questionNumber ++;    // needed to cycle the questions                      
+          setInterval(function(){
+            $("#questionPage").show();
+            $("#displayCorrectAnswer").hide();          
 
-          showCorrectAnswer(correctAnswer, trivia[questionNumber].image);
-          $("#questionPage").show();
-
+            }, 4000);
+            countDown = 11;
+           
+            
           displayQuestionsAnswers(trivia[questionNumber].question,trivia[questionNumber].a,trivia[questionNumber].b,trivia[questionNumber].c,trivia[questionNumber].d, trivia[questionNumber].answer);
-          countDown = 11;
+          
           updateStats();
-
+          
       }
       else {
         questionNumber ++; 
@@ -96,7 +104,7 @@ $("#startGame").on("click", function (){       // start game button
 })
 });
 // 30 second count down timer for each question
-function countDownTimer(){
+ function countDownTimer(){
     setInterval(function(){
     if (0<countDown){
          countDown--;
@@ -131,9 +139,17 @@ correctAnswer = correct;
 
 
 
-function showCorrectAnswer (answer, image){
-    $("#correctAnswerHeader").html(answer);
-    $("#correctAnswerImg").html(image);
+function showCorrectAnswer (){
+
+    $("#correctAnswerText").html("You chose the correct answer " + correctAnswer);
+    var img = document.createElement("img");
+    img.style.width = "525px";
+    img.style.height = "375px";
+    img.setAttribute("src", trivia[questionNumber].image);
+ 
+     var div = document.getElementById("correctAnswerImg");
+     div.innerHTML = '';
+     div.appendChild(img);
 
 
 

@@ -2,7 +2,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(images/twdCoverPhoto.jpg);
-    background-image: url(images/atlantageorgia.jpg)
 
 }
 
@@ -72,4 +71,10 @@ li{
     margin-top: 25%;
     
 
+}
+
+.answerPage {
+    text-align: center;
+    margin-top: 25%;
+    color: white;
 }
