@@ -36,18 +36,18 @@ body {
 
 .countDownStyle {
     text-align: center;
-    font-size: 40px;
-    margin-top: 35%;
+    font-size: 35px;
+    margin-top: 30%;
 }
 .questionStyle {
-    font-size: 45px;
+    font-size: 40px;
     text-align: center;
 
 }
 
 
 .answerButtons {
-    margin-top: 6%;
+    margin-top: 4%;
     background-color: lightgray;
     color: black;
     border-color: lightgray;
@@ -75,6 +75,6 @@ li{
 
 .answerPage {
     text-align: center;
-    margin-top: 25%;
+    margin-top: 20%;
     color: white;
 }

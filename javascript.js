@@ -35,7 +35,28 @@ var trivia = [{
 }, {
     question: "What job did Glen have before the apocalypse?",
     a: "Pizza Delivery", b:"Valet", c: "Dunder Mifflen Textiles", d:"Programmer",
-    answer: "Pizza Delivery"
+    answer: "Pizza Delivery",
+    image: "images/glendriving.webp"
+   
+}, {
+    question: "Who was Rick Grimes's best friend before the apocalypse?",
+    a: " Michonne", b:"Negan", c: "Shane", d:"Maggie",
+    answer: "Shane",
+    image: "images/shaneandrick.gif"
+}, {
+    question: "Who was left handcuffed on the rooftop in atlanta?",
+    a: " Michonne", b:"Glenn", c: "Meryl", d:"Andrea",
+    answer: "Meryl",
+    image: "images/merylrooftop.jpg"
+}, {
+    question: "Who is ricks wife?",
+    a: " Michonne", b:"Andrea", c: "Maggie", d:"Lori",
+    answer: "Lori",
+    images: "images/lori.gif"
+}, {
+    question: "Who was Rick Grimes's best friend before the apocalypse?",
+    a: " Michonne", b:"Negan", c: "Shane", d:"Maggie",
+    answer: "Shane"
 }, {
     question: "Who was Rick Grimes's best friend before the apocalypse?",
     a: " Michonne", b:"Negan", c: "Shane", d:"Maggie",
