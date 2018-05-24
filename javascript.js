@@ -56,7 +56,7 @@ var trivia = [{
 }
 ];
 
-
+$(document).ready(function () {
 
 //time clock start
 var countDown = 11;
@@ -67,7 +67,7 @@ var questionNumber = 0;     //used to cycle the next question
 var stopVar = "";
 var userAnswer = "";
 var gameOver = false;
-$(document).ready(function () {
+
     $("#endgameStats").hide();
     $("#questionPage").hide();         // hides question screen before start is clicked
     
@@ -78,14 +78,9 @@ $(document).ready(function () {
         // my pride and joy function. surprisingly i did this without googles help at all. displays question and cycles throuhg using question number++
         displayQuestionsAnswers(trivia[questionNumber].question, trivia[questionNumber].a, trivia[questionNumber].b, trivia[questionNumber].c, trivia[questionNumber].d, trivia[questionNumber].answer);
        
-        $("#restartGame").on("click", function(){
+     
 
-            restartGame();
-            $("#mainPageCard").show();         // hides intro screen after start is clicked 
-            $("#endgameStats").hide();
-        });
-
-
+    });
         // button listener for answers
         $(".answerButtons").on("click", function () {
 
@@ -144,9 +139,15 @@ $(document).ready(function () {
 
             }
 
-        })
-    })
-});
+        });
+        $("#restartGame").on("click", function(){
+            
+                        restartGame();
+                        $("#mainPageCard").show();         // hides intro screen after start is clicked 
+                        $("#endgameStats").hide();
+                  });
+   
+
 // 30 second count down timer for each question
 
 function countDownTimer() {
@@ -259,4 +260,6 @@ function restartGame() {
  updateStats();
 
 
-}
+};
+
+});
