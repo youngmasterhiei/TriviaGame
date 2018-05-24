@@ -1,98 +1,111 @@
 <!DOCTYPE html>
 <html>
-<head>
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-                <link rel="stylesheet" type="text/css" href="style.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+                crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
-<body>
-       
 
-        <div id = "mainPageCard" class="container titleDiv">
-                        <div class="row">
-                          <div class="col-2">
-                           
-                          </div>
-                          <div class="col-8">
-                                  <div >
+<body>
+
+
+        <div id="mainPageCard" class="container titleDiv">
+                <div class="row">
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col-8">
+                                <div>
                                         <h2 class="titleHeader">Trivia Game</h2>
                                         <button type="button" id="startGame" class="startButton btn btn-primary btn-lg btn-block">Start Game</button>
-                                  
+
                                 </div>
-                          </div>
-                          <div class="col-2">
-                           
-                          </div>
                         </div>
-</div>
+                        <div class="col-2">
 
-<!--make this invisible-->
+                        </div>
+                </div>
+        </div>
 
- <div id = "questionPage"  class="container titleDiv">
-                        <div class="row">
-                          <div class="col-2 stats">
-                        
-                          </div>
-                          <div class="col-8">
-                                  <div><h1 class="countDownStyle" id="countDownTimerId"></h1>
-                                        <p class="questionStyle"id="questionId"></p>
+        <!--make this invisible-->
+
+        <div id="questionPage" class="container titleDiv">
+                <div class="row">
+                        <div class="col-2 stats">
+
+                        </div>
+                        <div class="col-8">
+                                <div>
+                                        <h1 class="countDownStyle" id="countDownTimerId"></h1>
+                                        <p class="questionStyle" id="questionId"></p>
                                         <li>
-                                                <ul><button type="button" id="answer1Id" class="answerButtons btn btn-primary btn-lg btn-block"></button></ul>
-                                                <ul><button type="button" id="answer2Id" class="answerButtons btn btn-primary btn-lg btn-block"></button></ul>
-                                                <ul><button type="button" id="answer3Id" class="answerButtons btn btn-primary btn-lg btn-block"></button></ul>
-                                                <ul><button type="button" id="answer4Id" class="answerButtons btn btn-primary btn-lg btn-block"></button></ul>
+                                                <ul>
+                                                        <button type="button" id="answer1Id" class="answerButtons btn btn-primary btn-lg btn-block"></button>
+                                                </ul>
+                                                <ul>
+                                                        <button type="button" id="answer2Id" class="answerButtons btn btn-primary btn-lg btn-block"></button>
+                                                </ul>
+                                                <ul>
+                                                        <button type="button" id="answer3Id" class="answerButtons btn btn-primary btn-lg btn-block"></button>
+                                                </ul>
+                                                <ul>
+                                                        <button type="button" id="answer4Id" class="answerButtons btn btn-primary btn-lg btn-block"></button>
+                                                </ul>
 
                                         </li>
-                                  
+
                                 </div>
-                          </div>
-                          <div class="col-2">
-                           
-                          </div>
                         </div>
-</div>
+                        <div class="col-2">
 
-
-                        <div id = "displayCorrectAnswer" class="answerPage container ">
-                                <div class="row">
-                                  <div class="col-2">
-                                   
-                                  </div>
-                                  <div class="col-8">
-                                          <div >
-                                                <h2 id ="correctAnswerText"></h2>
-                                                <div id = "correctAnswerImg"></div>
-                                        </div>
-                                  </div>
-                                  <div class="col-2">
-                                   
-                                  </div>
-                                </div>
-                                </div>
-
-                                <div  class="container endgameStats">
-                                                <div class="row">
-                                                  <div class="col-2">
-                                                   
-                                                  </div>
-                                                  <div class="col-8">
-                                                          <div >
-                                                                <h2 id="statPageHeader">asdfasdfasdf</h2>
-                                                             
-                                                          
-                                                        </div>
-                                                  </div>
-                                                  <div class="col-2">
-                                                   
-                                                  </div>
-                                                </div>
                         </div>
+                </div>
+        </div>
+
+
+        <div id="displayCorrectAnswer" class="answerPage container ">
+                <div class="row">
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col-8">
+                                <div>
+                                        <h2 id="correctAnswerText"></h2>
+                                        <div id="correctAnswerImg"></div>
+                                </div>
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                </div>
+        </div>
+
+        <div id ="endgameStats"class="container ">
+                <div class="row">
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col-8">
+                                <div>
+                                        <h2 id="statPageHeader">asdfasdfasdf</h2>
+                                        <button type="button" id="restartGame" class=" btn btn-primary btn-lg btn-block">Reset Game</button>
+
+
+                                </div>
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                </div>
+        </div>
 
 
 
-<script type="text/javascript" src="javascript.js"></script>
+        <script type="text/javascript" src="javascript.js"></script>
 
 </body>
 

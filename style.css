@@ -80,3 +80,25 @@ li{
     margin-top: 20%;
     color: white;
 }
+
+#statPageHeader{
+    margin-top: 50%;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+#restartGame:hover{
+  background-color: darkgray;
+    color: white;
+    border-color: darkgray;
+}
+#restartGame{
+    margin-top: 4%;
+    background-color: lightgray;
+    color: black;
+    border-color: lightgray;
+    height: 30px;
+    text-align: center;
+    line-height: 2%;
+}
