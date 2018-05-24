@@ -248,7 +248,7 @@ function endGame() {
     $("#questionPage").hide();
     $("#endgameStats").show();
     // debugger;
-    $("#statPageHeader").html("Correct questions answered: " + userCorrectAnswers + " Incorrect questions answered: " + userWrongAnswers + "\n Total questions: " + (questionNumber - 1));
+    $("#statPageHeader").html("Correct questions answered: " + userCorrectAnswers + " Incorrect questions answered: " + userWrongAnswers + "\n Total questions: " + (questionNumber ));
     window.clearInterval(stopVar);
 
 };
