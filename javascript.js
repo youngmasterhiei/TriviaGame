@@ -98,12 +98,11 @@ var gameOver = false;
                 setTimeout(function () {
                     $("#questionPage").show();
                     $("#displayCorrectAnswer").hide();
-                    if (questionNumber === 2) {
+                    if (questionNumber === 8) {
                         endGame();
                     }
                     else {
-                        displayQuestionsAnswers(trivia[questionNumber].question, trivia[questionNumber].a, trivia[questionNumber].b, trivia[questionNumber].c, trivia[questionNumber].d, trivia[questionNumber].answer);
-                        countDownTimer();
+                        continueGame();
                     }
                 }, 4000);
 
@@ -123,12 +122,11 @@ var gameOver = false;
                 setTimeout(function () {
                     $("#questionPage").show();
                     $("#displayCorrectAnswer").hide();
-                    if (questionNumber === 2) {
+                    if (questionNumber === 8) {
                         endGame();
                     }
                     else {
-                        displayQuestionsAnswers(trivia[questionNumber].question, trivia[questionNumber].a, trivia[questionNumber].b, trivia[questionNumber].c, trivia[questionNumber].d, trivia[questionNumber].answer);
-                        countDownTimer();
+                        continueGame();
                     }
                 }, 4000);
 
@@ -168,7 +166,7 @@ function countDownTimer() {
             setTimeout(function () {
                 $("#questionPage").show();
                 $("#displayCorrectAnswer").hide();
-                if (questionNumber === 2) {
+                if (questionNumber === 8) {
                     endGame();
                 }
                 else {
@@ -187,6 +185,11 @@ function countDownTimer() {
 
 }
 
+
+function continueGame(){
+    displayQuestionsAnswers(trivia[questionNumber].question, trivia[questionNumber].a, trivia[questionNumber].b, trivia[questionNumber].c, trivia[questionNumber].d, trivia[questionNumber].answer);
+    countDownTimer();
+};
 
 // drys up the code displays the questions, answers and holds correct answer
 function displayQuestionsAnswers(question, answer1, answer2, answer3, answer4, correct) {
