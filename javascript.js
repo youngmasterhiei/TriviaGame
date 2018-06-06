@@ -13,11 +13,11 @@ function createTriviaQuestion(question, choices, answer, image){
 var trivia = [
     createTriviaQuestion(
         "Which character woke up from a coma after being shot?",
-        ['"Carl Grimes', 'Shane Walsh', "Daryl Dixon", 'Rick Grimes'], 
+        ['Carl Grimes', 'Shane Walsh', "Daryl Dixon", 'Rick Grimes'], 
         "Rick Grimes",
         "images/rickwakingup.gif"
     ),
-    
+
      {
     question: "What state is the setting for the show?",
     a: "Georgia", 
@@ -83,7 +83,7 @@ var questionNumber = 0;     //used to cycle the next question
 var stopVar = "";
 var userAnswer = "";
 var gameOver = false;
-
+var gameTime = 4000;
     $("#endgameStats").hide();
     $("#questionPage").hide();         // hides question screen before start is clicked
     
@@ -114,15 +114,8 @@ var gameOver = false;
                 setTimeout(function () {
                     $("#questionPage").show();
                     $("#displayCorrectAnswer").hide();
-                    if (questionNumber === 8) {
-                        endGame();
-                    }
-                    else {
-                        continueGame();
-                    }
-                }, 4000);
-
-
+                    questionNumber === 8 ? endGame() : continueGame();
+                }, gameTime);
                 updateStats();
 
 
@@ -138,15 +131,9 @@ var gameOver = false;
                 setTimeout(function () {
                     $("#questionPage").show();
                     $("#displayCorrectAnswer").hide();
-                    if (questionNumber === 8) {
-                        endGame();
-                    }
-                    else {
-                        continueGame();
-                    }
-                }, 4000);
+                    questionNumber === 8 ? endGame() : continueGame();
 
-
+                }, gameTime);
 
                 userWrongAnswers++;
                 updateStats();
@@ -186,13 +173,11 @@ function countDownTimer() {
                     endGame();
                 }
                 else {
-                    displayQuestionsAnswers(trivia[questionNumber].question, trivia[questionNumber].a, trivia[questionNumber].b, trivia[questionNumber].c, trivia[questionNumber].d, trivia[questionNumber].answer);
-                    countDownTimer();
+                    continueGame();
                 }
-            }, 4000);
+            }, gameTime);
             userWrongAnswers++;
             updateStats();
-            endGame();
         }
 
 
@@ -256,10 +241,6 @@ function showCorrectAnswer() {
 function updateStats() {
     $(".stats").html("Correct questions answered: " + userCorrectAnswers + "\n Incorrect questions answered: " + userWrongAnswers);
     countDown = 11;
-
-
-
-
 };
 
 function endGame() {
@@ -277,8 +258,6 @@ function restartGame() {
  userWrongAnswers = 0;    //counter for wrong answers
  questionNumber = 0; 
  updateStats();
-
-
 };
 
 });
