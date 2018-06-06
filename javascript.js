@@ -1,13 +1,29 @@
+function createTriviaQuestion(question, choices, answer, image){
+    return {
+        question: question,
+        a: choices[0],
+        b: choices[1],
+        c: choices[2],
+        d: choices[3],
+        answer: answer,
+        image: image
+    }
+}
 
-
-var trivia = [{
-    question: "Which character woke up from a coma after being shot?",
-    a: "Carl Grimes", b: "Shane Walsh", c: "Daryl Dixon", d: "Rick Grimes",
-    answer: "Rick Grimes",
-    image: "images/rickwakingup.gif"
-}, {
+var trivia = [
+    createTriviaQuestion(
+        "Which character woke up from a coma after being shot?",
+        ['"Carl Grimes', 'Shane Walsh', "Daryl Dixon", 'Rick Grimes'], 
+        "Rick Grimes",
+        "images/rickwakingup.gif"
+    ),
+    
+     {
     question: "What state is the setting for the show?",
-    a: "Georgia", b: "Ohio", c: "Florida", d: "Virginia",
+    a: "Georgia", 
+    b: "Ohio", 
+    c: "Florida", 
+    d: "Virginia",
     answer: "Georgia",
     image: "images/atlantageorgia.jpg"
 
