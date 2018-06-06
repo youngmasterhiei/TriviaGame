@@ -169,12 +169,7 @@ function countDownTimer() {
             setTimeout(function () {
                 $("#questionPage").show();
                 $("#displayCorrectAnswer").hide();
-                if (questionNumber === 8) {
-                    endGame();
-                }
-                else {
-                    continueGame();
-                }
+                questionNumber === 8 ? endgame() : continueGame();
             }, gameTime);
             userWrongAnswers++;
             updateStats();
